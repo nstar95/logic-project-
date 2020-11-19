@@ -17,5 +17,4 @@ while True:
             number += 1
             counter += 1
         else:
-            # print(f'There vere {counter} numbers printed')
             break
