@@ -1,18 +1,17 @@
-from typing import Counter
+while True:
+    number = int(input("Enter number: "))
+    if number <= 0:
+        print('Please enter a number that is greader then 0')
+        continue
 
+    number_of_multiples = int(input("Enter number of multiples: "))
 
-number = int(input("Enter number: "))
-print(number)
-print(type(number))
-number_of_multiples = int(input("Enter number of multiples: "))
-print(number_of_multiples)
-print(type(number_of_multiples))
+    counter_of_multiples = 0
+    increment = 2
 
-counter = 0
-times = 1
-while counter < number_of_multiples:
-    multiple = number * times
-    times += 1
-    if multiple % 2 == 0:
-        print(multiple)
-        counter += 1
+    while counter_of_multiples < number_of_multiples:
+        multiple = number * increment
+        increment += 1
+        if multiple % 2 == 0:
+            print(multiple)
+            counter_of_multiples += 1
