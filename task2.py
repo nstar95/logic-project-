@@ -1,5 +1,4 @@
 while True:
-
     a = int(input("Enter value for a: "))
     while a <= 0 or a % 1 != 0:
         a = int(input("a must be positive integer: "))
