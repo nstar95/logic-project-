@@ -1,5 +1,5 @@
 number = float(input("Enter number: "))
-while number != 0:
+while number == 0:
     number = float(input('Please enter a number that is not 0: '))
 
 number_of_multiples = float(input("Enter number of multiples: "))
