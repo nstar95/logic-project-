@@ -7,8 +7,43 @@ function Task1 {
 
 
 function Task2 {
-    #put your code here instead of echo...
-    echo 'This is function task2'
+#This is task 2 of the comp1236 group assignment
+#Author: Dhruv Patel
+
+#1. Get user input
+
+read -p "Please enter the coefficient integer: " coefficient
+read -p "Please enther the contast integer:" constant
+read -p "Please enter number of terms listed:" limit
+
+while (($limit < 0))
+do
+    read -p "Please enter number of terms listed (a positive number):" limit
+done
+#1 set up loop
+n=1
+counter=0
+sum=0
+check=0
+
+#arithmetic loop
+while (($counter < $limit))
+do
+    f=$(($coefficient*$n))
+    f=$(($f+$constant)) #2 steps to solve the linear expression
+    echo $f
+    sum=$(($sum+$f)) #summing up all printed outputs during loop
+    n=$(($n+1))
+    counter=$(($counter+1)) 
+done
+
+read -p "Type 'sum' to see the sum of all printed values: " check
+if (($check == "sum"))
+then
+    echo The sum is $sum
+else
+    echo FINE THEN
+fi
 }
 
 
