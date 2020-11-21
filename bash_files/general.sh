@@ -1,19 +1,24 @@
 #!/bin/bash
-
+# Functions declaration
 function Task1 {
     #put your code here instead of echo...
     echo 'This is function task1'
 }
+
+
 function Task2 {
     #put your code here instead of echo...
     echo 'This is function task2'
 }
+
+
 function Task3 {
         read -p "Enter the greatest number for: "  greatest_number
 
     while [ $greatest_number -lt 2 ]  #2 is the lowest number that can be represented as product of two "nonnegative integers" in succession
     do
-        read -p "Greatest number can't be less then 2: " greatest_number
+        echo -e "\nGreatest number can't be less then 2"
+        read -p "Please enter a valid number: " greatest_number
     done
 
     #Veriable declaration
@@ -37,18 +42,24 @@ function Task3 {
         fi
     done
 }
+
+
 function ErrorMessege {
     echo -e "\n\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     echo -e "\t!!!!!!!!    Sorry, your input doesnt mach any option    !!!!!!!!"
     echo -e "\t!!!!!!!!       PLEASE CHOOSE FROM THE MENU BELLOW       !!!!!!!!"
     echo -e "\t!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 }
+
+
 function GoodBye {
     echo "Good Bye!!!"
 }
 
+#Main program
 while true
 do  
+    #displaying a menu
     echo -e "\n*********************************************************************************"
     echo -e "*                                                                               *"
     echo -e "*\tPrint list of even multiples of the number(M/m)                         *"
@@ -59,6 +70,8 @@ do
     echo -e "*********************************************************************************\n"
     read -p "        Please select: " selection
     echo -e "        You selected: $selection\n"
+    
+    #comparing users input with our options
     case $selection in
         "M" | 'm')
         Task1
